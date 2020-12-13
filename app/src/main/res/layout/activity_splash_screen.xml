@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/droid"
+    android:gravity="center"
+    tools:context=".SplashScreen">
+
+    <TextView
+        android:id="@+id/droid_hub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.DroidHub.TextView"
+        android:text="DroidHub"
+        android:textColor="@color/white"
+        android:gravity="top"
+        android:layout_centerInParent="true"/>
+
+    <ImageView
+        android:id="@+id/droid_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/droid_icon"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@id/droid_hub"/>
+</RelativeLayout>
