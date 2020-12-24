@@ -1,10 +1,11 @@
-package com.example.android.droidhub
+package com.example.android.droidhub.Splash
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.example.android.droidhub.SignUp.SignUpFragment
 import com.example.android.droidhub.databinding.ActivitySplashScreenBinding
 
 @Suppress("DEPRECATION")
@@ -25,7 +26,7 @@ class SplashScreen : AppCompatActivity() {
         )
 
         Handler().postDelayed({
-            val intent = Intent(this, SignUp::class.java)
+            val intent = Intent(this, SignUpFragment::class.java)
             startActivity(intent)
             finish()
         }, splashTimeOut)

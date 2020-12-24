@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">DroidHub</string>
+    <string name="name">Name</string>
+    <string name="sign_up">Sign up</string>
+    <string name="or_login">or Login</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="log_in">Log in</string>
+    <string name="or_sign_up">Or Sign up</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="loading">Loading</string>
+    <string name="choose_file">Choose file</string>
+    <string name="file_name">File name goes here</string>
+    <string name="add_file">Add a file</string>
+    <string name="upload_file">Upload file</string>
 </resources>

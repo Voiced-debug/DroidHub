@@ -6,23 +6,23 @@
     android:layout_height="match_parent"
     android:background="@color/droid"
     android:gravity="center"
-    tools:context=".SplashScreen">
+    tools:context=".Splash.SplashScreen">
 
     <TextView
         android:id="@+id/droid_hub"
+        style="@style/Widget.DroidHub.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/Widget.DroidHub.TextView"
-        android:text="DroidHub"
-        android:textColor="@color/white"
+        android:layout_centerInParent="true"
         android:gravity="top"
-        android:layout_centerInParent="true"/>
+        android:text="DroidHub"
+        android:textColor="@color/white" />
 
     <ImageView
         android:id="@+id/droid_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/droid_icon"
         android:layout_centerInParent="true"
-        android:layout_toRightOf="@id/droid_hub"/>
+        android:layout_toEndOf="@id/droid_hub"
+        app:srcCompat="@drawable/droid_icon" />
 </RelativeLayout>
