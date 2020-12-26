@@ -16,7 +16,7 @@
             android:id="@+id/sign_up"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="38dp"
             style="@style/Widget.DroidHub.TextView"
             android:text="@string/sign_up"
             android:gravity="top"/>
@@ -70,15 +70,14 @@
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <ImageView
+        <ProgressBar
             android:id="@+id/load"
+            android:indeterminateTint="@color/droid"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_below="@id/password_layout"
             android:layout_marginTop="60dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/load"
-            android:contentDescription="@string/loading" />
+            android:visibility="gone"
+            android:layout_below="@id/password_layout"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/sign_up_button"

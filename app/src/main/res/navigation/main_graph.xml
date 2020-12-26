@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/logInFragment">
+
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.android.droidhub.main.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" />
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.android.droidhub.SignUp.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+
+    <fragment
+        android:id="@+id/filesFragment"
+        android:name="com.example.android.droidhub.files.FilesFragment"
+        android:label="fragment_files"
+        tools:layout="@layout/fragment_files" />
+
+    <fragment
+        android:id="@+id/uploadFilesFragment"
+        android:name="com.example.android.droidhub.files.UploadFilesFragment"
+        android:label="fragment_upload_files"
+        tools:layout="@layout/fragment_upload_files" />
+</navigation>

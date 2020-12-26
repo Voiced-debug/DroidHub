@@ -16,7 +16,7 @@
             style="@style/Widget.DroidHub.TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="38dp"
             android:gravity="top"
             android:text="@string/add_file" />
 
@@ -47,16 +47,16 @@
             android:layout_below="@id/file_layout"
             app:cornerRadius="0dp"/>
 
-        <ImageView
+        <ProgressBar
             android:id="@+id/load"
+            android:indeterminateTint="@color/droid"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_below="@id/choose"
             android:layout_marginTop="124dp"
-            android:contentDescription="@string/loading"
-            android:rotation="234"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/load" />
+            android:layout_below="@id/choose"
+            android:visibility="gone"
+            android:rotation="234"/>
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/upload"
