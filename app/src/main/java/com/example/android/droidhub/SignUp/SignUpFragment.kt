@@ -6,7 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import com.example.android.droidhub.R
 import com.example.android.droidhub.databinding.FragmentSignUpBinding
+import com.example.android.droidhub.utilities.verifyEmail
+import com.example.android.droidhub.utilities.verifyName
+import com.example.android.droidhub.utilities.verifyPassword
 import com.google.firebase.auth.FirebaseAuth
 
 class SignUpFragment : Fragment() {
@@ -27,9 +32,20 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
 
+        binding.orLogin.setOnClickListener {
+            view.findNavController().navigate(R.id.action_signUpFragment_to_logInFragment)
+        }
+
         load = binding.load
         binding.signUpButton.setOnClickListener {
             load.visibility = View.VISIBLE
+
+            if (verifyName(this@SignUpFragment, binding.nameEditText.text.toString()) &&
+                    verifyEmail(this@SignUpFragment, binding.emailEditText.text.toString()) &&
+                    verifyPassword(this@SignUpFragment, binding.passwordEditText.text.toString()))
+            {
+
+            }
         }
     }
 

@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import com.example.android.droidhub.R
 import com.example.android.droidhub.databinding.FragmentLogInBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -27,6 +29,10 @@ class LogInFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
+
+        binding.orSignUp.setOnClickListener {
+            view.findNavController().navigate(R.id.action_logInFragment_to_signUpFragment)
+        }
 
         load = binding.load
         binding.logInButton.setOnClickListener {

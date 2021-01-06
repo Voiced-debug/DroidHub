@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DroidHub">
         <activity android:name=".main.MainActivity"></activity>
-        <activity android:name=".Splash.SplashScreen">
+        <activity android:name=".Splash.SplashScreen"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

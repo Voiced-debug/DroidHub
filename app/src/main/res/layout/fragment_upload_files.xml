@@ -54,7 +54,6 @@
             android:layout_height="80dp"
             android:layout_marginTop="124dp"
             android:layout_below="@id/choose"
-            android:visibility="gone"
             android:rotation="234"/>
 
 

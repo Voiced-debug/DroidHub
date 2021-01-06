@@ -9,23 +9,44 @@
         android:id="@+id/logInFragment"
         android:name="com.example.android.droidhub.main.LogInFragment"
         android:label="fragment_log_in"
-        tools:layout="@layout/fragment_log_in" />
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_filesFragment"
+            app:destination="@id/filesFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.android.droidhub.SignUp.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/filesFragment"
         android:name="com.example.android.droidhub.files.FilesFragment"
         android:label="fragment_files"
-        tools:layout="@layout/fragment_files" />
+        tools:layout="@layout/fragment_files" >
+        <action
+            android:id="@+id/action_filesFragment_to_uploadFilesFragment"
+            app:destination="@id/uploadFilesFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/uploadFilesFragment"
         android:name="com.example.android.droidhub.files.UploadFilesFragment"
         android:label="fragment_upload_files"
-        tools:layout="@layout/fragment_upload_files" />
+        tools:layout="@layout/fragment_upload_files" >
+        <action
+            android:id="@+id/action_uploadFilesFragment_to_filesFragment"
+            app:destination="@id/filesFragment"
+            app:popUpTo="@id/filesFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

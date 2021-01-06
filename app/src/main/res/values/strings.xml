@@ -15,4 +15,7 @@
     <string name="file_name">File name goes here</string>
     <string name="add_file">Add a file</string>
     <string name="upload_file">Upload file</string>
+    <string name="your_files">Your files</string>
+    <string name="droidhub">DroidHub</string>
+    <string name="droid_icon">Droid icon</string>
 </resources>
