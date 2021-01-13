@@ -18,4 +18,11 @@
     <string name="your_files">Your files</string>
     <string name="droidhub">DroidHub</string>
     <string name="droid_icon">Droid icon</string>
+    <string name="About_app">DroidHub is an app for anybody and everyone who needs a medium for storing their files(images, pdfs, videos). <br></br><br></br>
+        What more is that apart from saving to the cloud, it allows you to download the files uploaded to the cloud to your devices anywhere, anytime.</string>
+    <string name="about">About</string>
+    <string name="about_the_app">About the App</string>
+    <string name="log_out">Log out</string>
+    <string name="about_developer">About Developer</string>
+    <string name="about_dev">Contact: Bakarek008@gmail.com</string>
 </resources>
