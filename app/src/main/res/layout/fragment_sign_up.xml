@@ -85,12 +85,12 @@
             android:id="@+id/sign_up_button"
             android:layout_width="match_parent"
             android:layout_height="66dp"
+            android:layout_below="@id/load"
             android:layout_marginTop="60dp"
             android:text="@string/sign_up"
             android:textAllCaps="false"
             android:textSize="20sp"
-            android:layout_below="@id/load"
-            app:cornerRadius="0dp"/>
+            app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/or_login"

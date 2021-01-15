@@ -56,7 +56,6 @@
             android:layout_below="@id/choose"
             android:rotation="234"/>
 
-
         <com.google.android.material.button.MaterialButton
             android:id="@+id/upload"
             android:layout_width="match_parent"
@@ -67,5 +66,6 @@
             android:textSize="20sp"
             android:layout_below="@id/load"
             app:cornerRadius="0dp"/>
+
     </RelativeLayout>
 </ScrollView>

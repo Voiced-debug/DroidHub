@@ -30,6 +30,9 @@
         <action
             android:id="@+id/action_signUpFragment_to_logInFragment"
             app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_filesFragment"
+            app:destination="@id/filesFragment" />
     </fragment>
 
     <fragment
@@ -63,4 +66,5 @@
         android:name="com.example.android.droidhub.menu.AboutDev"
         android:label="fragment_about_dev"
         tools:layout="@layout/fragment_about_dev" />
+
 </navigation>
