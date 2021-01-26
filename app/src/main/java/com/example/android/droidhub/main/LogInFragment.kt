@@ -33,6 +33,7 @@ class LogInFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        // Initializing events
         load = binding.load
         email = binding.emailEditText
         password = binding.passwordEditText
@@ -49,6 +50,7 @@ class LogInFragment : Fragment() {
 
     }
 
+    // This signs in an existing user
     private fun signInUser() {
         load.visibility = View.VISIBLE
 
