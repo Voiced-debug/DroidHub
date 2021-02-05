@@ -1,6 +1,7 @@
 package com.example.android.droidhub.files
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
@@ -15,10 +16,13 @@ import androidx.fragment.app.Fragment
 import com.example.android.droidhub.databinding.FragmentUploadFilesBinding
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import dmax.dialog.SpotsDialog
+import java.util.*
 
 class UploadFilesFragment : Fragment() {
     private var _binding: FragmentUploadFilesBinding? = null
     private val binding get() = _binding!!
+    private lateinit var alertDialog: AlertDialog
     private lateinit var load: ProgressBar
     private lateinit var fileName: TextView
     private var filePath: Uri? = null
@@ -54,6 +58,7 @@ class UploadFilesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         load = binding.load
         fileName = binding.fileName
+        alertDialog = SpotsDialog.Builder().setCancelable(false).setContext(context).build()
         load.visibility = View.INVISIBLE
         firebaseStore = FirebaseStorage.getInstance()
         storageReference = FirebaseStorage.getInstance().getReference("file_upload");
@@ -88,8 +93,23 @@ class UploadFilesFragment : Fragment() {
     }
 
     private  fun uploadFiles() {
-        load.visibility = View.VISIBLE
-
+        if ( filePath != null) {
+            load.visibility = View.VISIBLE
+            alertDialog.show()
+            val reference = storageReference?.child("files" + UUID.randomUUID().toString())
+            reference?.putFile(filePath!!)?.addOnSuccessListener {
+                load.visibility = View.INVISIBLE
+                alertDialog.dismiss()
+                Toast.makeText(context, "File Upload successful", Toast.LENGTH_SHORT).show()
+            }?.addOnFailureListener{ e ->
+                load.visibility = View.GONE
+                alertDialog.dismiss()
+                Toast.makeText(context, "File upload failed", Toast.LENGTH_SHORT).show()
+            }?.addOnProgressListener { taskSnapshot ->
+                val progress = 100.0 * taskSnapshot.bytesTransferred / taskSnapshot.totalByteCount
+                alertDialog.setMessage("Uploading $progress %")
+            }
+        }
     }
 
     override fun onDestroyView() {

@@ -95,7 +95,7 @@ class SignUpFragment : Fragment() {
                         .addOnCompleteListener { task ->
                             load.visibility = View.INVISIBLE
                             if (task.isSuccessful) {
-                                view?.findNavController()?.navigate(R.id.action_signUpFragment_to_filesFragment)
+                                view?.findNavController()?.navigate(R.id.action_signUpFragment_to_logInFragment)
                             }
                         }
                     Toast.makeText(
@@ -115,7 +115,7 @@ class SignUpFragment : Fragment() {
         if (auth.currentUser != null) {
             Log.d("UID  ", auth.currentUser!!.uid)
             Navigation.findNavController(requireView())
-                .navigate(R.id.action_signUpFragment_to_filesFragment)
+                .navigate(R.id.action_signUpFragment_to_logInFragment)
         }
     }
 

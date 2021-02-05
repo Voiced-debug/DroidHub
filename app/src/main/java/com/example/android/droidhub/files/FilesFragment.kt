@@ -8,10 +8,12 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.android.droidhub.R
 import com.example.android.droidhub.databinding.FragmentFilesBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class FilesFragment : Fragment() {
     private var _binding: FragmentFilesBinding? = null
     private val binding get() = _binding!!
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,6 +25,7 @@ class FilesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         binding.uploadFile.setOnClickListener {
             view.findNavController().navigate(R.id.action_filesFragment_to_uploadFilesFragment)

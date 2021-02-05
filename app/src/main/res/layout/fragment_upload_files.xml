@@ -33,7 +33,7 @@
             android:hint="@string/file_name"
             android:visibility="visible"
             android:freezesText="true"
-            android:textSize="25sp" />
+            android:textSize="18sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/choose"

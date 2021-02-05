@@ -13,13 +13,19 @@
         <action
             android:id="@+id/action_logInFragment_to_filesFragment"
             app:destination="@id/filesFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/filesFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_logInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
-        <action
-            android:id="@+id/action_logInFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment" />
     </fragment>
 
     <fragment
@@ -29,10 +35,11 @@
         tools:layout="@layout/fragment_sign_up" >
         <action
             android:id="@+id/action_signUpFragment_to_logInFragment"
-            app:destination="@id/logInFragment" />
-        <action
-            android:id="@+id/action_signUpFragment_to_filesFragment"
-            app:destination="@id/filesFragment" />
+            app:destination="@id/logInFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment
@@ -42,7 +49,13 @@
         tools:layout="@layout/fragment_files" >
         <action
             android:id="@+id/action_filesFragment_to_uploadFilesFragment"
-            app:destination="@id/uploadFilesFragment" />
+            app:destination="@id/uploadFilesFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/uploadFilesFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
@@ -53,6 +66,10 @@
         <action
             android:id="@+id/action_uploadFilesFragment_to_filesFragment"
             app:destination="@id/filesFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             app:popUpTo="@id/filesFragment"
             app:popUpToInclusive="true" />
     </fragment>
